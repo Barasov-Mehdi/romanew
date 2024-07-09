@@ -366,6 +366,31 @@
             }
         }
     }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        padding: 15px;
+        // background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+        background-color: rgba(0, 0, 0, 0.966);
+        font-size: 24px;
+        color: white;
+        // color: rgb(47, 197, 47);
+        margin: 10px 0 50px 0;
+        text-align: center;
+        font-weight: 500;
+    
+        span {
+            color: white;
+            font-size: 24px;
+            margin: 10px;
+            text-align: center;
+            font-style: italic;
+            font-weight: 500;
+        }
+    }
 }
 
 @media (min-width: 300px) and (max-width: 359px) {

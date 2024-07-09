@@ -312,6 +312,27 @@
   font-size: 20px;
   text-align: center;
 }
+.container footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.966);
+  font-size: 24px;
+  color: white;
+  margin: 10px 0 50px 0;
+  text-align: center;
+  font-weight: 500;
+}
+.container footer span {
+  color: white;
+  font-size: 24px;
+  margin: 10px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+}
 
 @media (min-width: 300px) and (max-width: 359px) {
   .container .header {
