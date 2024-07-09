@@ -7,12 +7,12 @@
 .container {
     display: flex;
     justify-content: center;
-    align-content: space-around;
+    align-content: space-between;
     flex-wrap: nowrap;
     flex-direction: column;
     position: relative;
     position: none;
-    
+
 
     .header {
 
@@ -188,7 +188,7 @@
             margin: 0 10px;
             background-color: #344e41;
         }
-        
+
     }
 
     .brand_name {
@@ -226,53 +226,61 @@
         flex-wrap: wrap;
         justify-content: space-around;
         margin-top: 2rem;
-        
+
         .product_card {
-            width: calc(30% - 20px); /* Kartların genişliği ve aralarındaki boşluk */
+            width: calc(30% - 20px);
+            /* Kartların genişliği ve aralarındaki boşluk */
             margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Hafif bir gölge efekti */
             border-radius: 10px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             background-color: #fff;
-        
+
             &:hover {
                 transform: translateY(-5px);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover'da gölge efekti */
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                /* Hover'da gölge efekti */
             }
-        
+
             .product_img {
                 width: 100%;
-                height: auto; /* Otomatik yükseklik */
-                object-fit: contain; /* Resmi kartın içine sığdır */
+                height: auto;
+                /* Otomatik yükseklik */
+                object-fit: contain;
+                /* Resmi kartın içine sığdır */
                 border-top-left-radius: 10px;
                 border-top-right-radius: 10px;
             }
-        
+
             .product_details {
                 padding: 1rem;
-                text-align: center; /* Ortaya hizalama */
-    
+                text-align: center;
+                /* Ortaya hizalama */
+
                 .product_name {
                     font-size: 1.2rem;
                     font-weight: bold;
                     margin-bottom: 0.5rem;
-                    color: #333; /* Yazı rengini biraz koyulaştıralım */
+                    color: #333;
+                    /* Yazı rengini biraz koyulaştıralım */
                 }
-        
+
                 .product_size {
                     font-size: 1rem;
-                    color: #666; /* Yazı rengini biraz açalım */
+                    color: #666;
+                    /* Yazı rengini biraz açalım */
                     margin-bottom: 0.5rem;
                 }
             }
-        
+
             .pro_contact {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 padding: 0.5rem;
-    
+
                 .whatsappButton {
                     width: 90%;
                     background-color: rgb(47, 158, 47);
@@ -284,15 +292,16 @@
                     border-radius: 5px;
                     cursor: pointer;
                     transition: background-color 0.3s ease;
-    
+
                     &:hover {
-                        background-color: rgb(39, 132, 39); /* Hover'da renk değişimi */
+                        background-color: rgb(39, 132, 39);
+                        /* Hover'da renk değişimi */
                     }
                 }
             }
         }
     }
-    
+
 
     .bars_box {
         width: 100%;
@@ -371,16 +380,8 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        align-items: center;
-        padding: 15px;
-        // background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+        padding: 13px;
         background-color: rgba(0, 0, 0, 0.966);
-        font-size: 24px;
-        color: white;
-        // color: rgb(47, 197, 47);
-        margin: 10px 0 50px 0;
-        text-align: center;
-        font-weight: 500;
     
         span {
             color: white;
@@ -392,6 +393,8 @@
         }
     }
 }
+
+
 
 @media (min-width: 300px) and (max-width: 359px) {
     .container {
@@ -607,38 +610,40 @@
             flex-wrap: wrap;
             justify-content: space-around;
             margin-top: 2rem;
-        
+
             .product_card {
-                width: calc(50% - 20px); /* Kartların genişliği ve aralarındaki boşluk */
+                width: calc(50% - 20px);
+                /* Kartların genişliği ve aralarındaki boşluk */
                 margin-bottom: 20px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
                 transition: transform 0.3s ease;
                 background-color: #fff;
-        
+
                 &:hover {
                     transform: translateY(-5px);
                 }
-        
+
                 .product_img {
                     width: 100%;
-                    object-fit: contain; /* Resmi kartın içine sığdır */
+                    object-fit: contain;
+                    /* Resmi kartın içine sığdır */
                     border-top-left-radius: 8px;
                     border-top-right-radius: 8px;
                 }
-        
+
                 .product_details {
                     padding: 1rem;
-        
+
                     .product_name {
                         text-align: center;
                         font-size: 16px;
                         font-weight: bolder;
                         margin-bottom: 0.5rem;
-    
+
                     }
-        
+
                     .product_size {
                         text-align: center;
                         color: black;
@@ -648,7 +653,7 @@
                     }
                 }
             }
-    
+
         }
 
     }
@@ -697,7 +702,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        
+
 
                         a {
                             img {
@@ -873,38 +878,40 @@
             flex-wrap: wrap;
             justify-content: space-around;
             margin-top: 2rem;
-        
+
             .product_card {
-                width: calc(50% - 20px); /* Kartların genişliği ve aralarındaki boşluk */
+                width: calc(50% - 20px);
+                /* Kartların genişliği ve aralarındaki boşluk */
                 margin-bottom: 20px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
                 transition: transform 0.3s ease;
                 background-color: #fff;
-        
+
                 &:hover {
                     transform: translateY(-5px);
                 }
-        
+
                 .product_img {
                     width: 100%;
-                    object-fit: contain; /* Resmi kartın içine sığdır */
+                    object-fit: contain;
+                    /* Resmi kartın içine sığdır */
                     border-top-left-radius: 8px;
                     border-top-right-radius: 8px;
                 }
-        
+
                 .product_details {
                     padding: 1rem;
-        
+
                     .product_name {
                         text-align: center;
                         font-size: 16px;
                         font-weight: bolder;
                         margin-bottom: 0.5rem;
-    
+
                     }
-        
+
                     .product_size {
                         text-align: center;
                         color: black;
@@ -914,7 +921,7 @@
                     }
                 }
             }
-    
+
         }
 
     }
@@ -1107,38 +1114,40 @@
             flex-wrap: wrap;
             justify-content: space-around;
             margin-top: 2rem;
-        
+
             .product_card {
-                width: calc(51% - 20px); /* Kartların genişliği ve aralarındaki boşluk */
+                width: calc(51% - 20px);
+                /* Kartların genişliği ve aralarındaki boşluk */
                 margin-bottom: 20px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
                 transition: transform 0.3s ease;
                 background-color: #fff;
-        
+
                 &:hover {
                     transform: translateY(-5px);
                 }
-        
+
                 .product_img {
                     width: 100%;
-                    object-fit: contain; /* Resmi kartın içine sığdır */
+                    object-fit: contain;
+                    /* Resmi kartın içine sığdır */
                     border-top-left-radius: 8px;
                     border-top-right-radius: 8px;
                 }
-        
+
                 .product_details {
                     padding: 1rem;
-        
+
                     .product_name {
                         text-align: center;
                         font-size: 16px;
                         font-weight: bolder;
                         margin-bottom: 0.5rem;
-    
+
                     }
-        
+
                     .product_size {
                         text-align: center;
                         color: black;
@@ -1148,7 +1157,7 @@
                     }
                 }
             }
-    
+
         }
     }
 }
@@ -1331,38 +1340,40 @@
             flex-wrap: wrap;
             justify-content: space-around;
             margin-top: 2rem;
-        
+
             .product_card {
-                width: 178px; /* Kartların genişliği ve aralarındaki boşluk */
+                width: 178px;
+                /* Kartların genişliği ve aralarındaki boşluk */
                 margin-bottom: 20px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border-radius: 8px;
                 overflow: hidden;
                 transition: transform 0.3s ease;
                 background-color: #fff;
-        
+
                 &:hover {
                     transform: translateY(-5px);
                 }
-        
+
                 .product_img {
                     width: 100%;
-                    object-fit: contain; /* Resmi kartın içine sığdır */
+                    object-fit: contain;
+                    /* Resmi kartın içine sığdır */
                     border-top-left-radius: 8px;
                     border-top-right-radius: 8px;
                 }
-        
+
                 .product_details {
                     padding: 1rem;
-        
+
                     .product_name {
                         text-align: center;
                         font-size: 16px;
                         font-weight: bolder;
                         margin-bottom: 0.5rem;
-    
+
                     }
-        
+
                     .product_size {
                         text-align: center;
                         color: black;
@@ -1372,7 +1383,7 @@
                     }
                 }
             }
-    
+
         }
     }
 }
@@ -1450,6 +1461,6 @@
                 }
             }
         }
-        
+
     }
 }

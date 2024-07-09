@@ -8,7 +8,7 @@
 .container {
   display: flex;
   justify-content: center;
-  align-content: space-around;
+  align-content: space-between;
   flex-wrap: nowrap;
   flex-direction: column;
   position: relative;
@@ -194,9 +194,11 @@
   margin-top: 2rem;
 }
 .container .product_box .product_card {
-  width: calc(30% - 20px); /* Kartların genişliği ve aralarındaki boşluk */
+  width: calc(30% - 20px);
+  /* Kartların genişliği ve aralarındaki boşluk */
   margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Hafif bir gölge efekti */
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -204,29 +206,35 @@
 }
 .container .product_box .product_card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover'da gölge efekti */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Hover'da gölge efekti */
 }
 .container .product_box .product_card .product_img {
   width: 100%;
-  height: auto; /* Otomatik yükseklik */
+  height: auto;
+  /* Otomatik yükseklik */
   -o-object-fit: contain;
-     object-fit: contain; /* Resmi kartın içine sığdır */
+     object-fit: contain;
+  /* Resmi kartın içine sığdır */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 .container .product_box .product_card .product_details {
   padding: 1rem;
-  text-align: center; /* Ortaya hizalama */
+  text-align: center;
+  /* Ortaya hizalama */
 }
 .container .product_box .product_card .product_details .product_name {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #333; /* Yazı rengini biraz koyulaştıralım */
+  color: #333;
+  /* Yazı rengini biraz koyulaştıralım */
 }
 .container .product_box .product_card .product_details .product_size {
   font-size: 1rem;
-  color: #666; /* Yazı rengini biraz açalım */
+  color: #666;
+  /* Yazı rengini biraz açalım */
   margin-bottom: 0.5rem;
 }
 .container .product_box .product_card .pro_contact {
@@ -248,7 +256,8 @@
   transition: background-color 0.3s ease;
 }
 .container .product_box .product_card .pro_contact .whatsappButton:hover {
-  background-color: rgb(39, 132, 39); /* Hover'da renk değişimi */
+  background-color: rgb(39, 132, 39);
+  /* Hover'da renk değişimi */
 }
 .container .bars_box {
   width: 100%;
@@ -316,14 +325,8 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  align-items: center;
-  padding: 15px;
+  padding: 13px;
   background-color: rgba(0, 0, 0, 0.966);
-  font-size: 24px;
-  color: white;
-  margin: 10px 0 50px 0;
-  text-align: center;
-  font-weight: 500;
 }
 .container footer span {
   color: white;
@@ -509,7 +512,8 @@
     margin-top: 2rem;
   }
   .container .product_box .product_card {
-    width: calc(50% - 20px); /* Kartların genişliği ve aralarındaki boşluk */
+    width: calc(50% - 20px);
+    /* Kartların genişliği ve aralarındaki boşluk */
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -523,7 +527,8 @@
   .container .product_box .product_card .product_img {
     width: 100%;
     -o-object-fit: contain;
-       object-fit: contain; /* Resmi kartın içine sığdır */
+       object-fit: contain;
+    /* Resmi kartın içine sığdır */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
@@ -720,7 +725,8 @@
     margin-top: 2rem;
   }
   .container .product_box .product_card {
-    width: calc(50% - 20px); /* Kartların genişliği ve aralarındaki boşluk */
+    width: calc(50% - 20px);
+    /* Kartların genişliği ve aralarındaki boşluk */
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -734,7 +740,8 @@
   .container .product_box .product_card .product_img {
     width: 100%;
     -o-object-fit: contain;
-       object-fit: contain; /* Resmi kartın içine sığdır */
+       object-fit: contain;
+    /* Resmi kartın içine sığdır */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
@@ -903,7 +910,8 @@
     margin-top: 2rem;
   }
   .container .product_box .product_card {
-    width: calc(51% - 20px); /* Kartların genişliği ve aralarındaki boşluk */
+    width: calc(51% - 20px);
+    /* Kartların genişliği ve aralarındaki boşluk */
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -917,7 +925,8 @@
   .container .product_box .product_card .product_img {
     width: 100%;
     -o-object-fit: contain;
-       object-fit: contain; /* Resmi kartın içine sığdır */
+       object-fit: contain;
+    /* Resmi kartın içine sığdır */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
@@ -1084,7 +1093,8 @@
     margin-top: 2rem;
   }
   .container .product_box .product_card {
-    width: 178px; /* Kartların genişliği ve aralarındaki boşluk */
+    width: 178px;
+    /* Kartların genişliği ve aralarındaki boşluk */
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -1098,7 +1108,8 @@
   .container .product_box .product_card .product_img {
     width: 100%;
     -o-object-fit: contain;
-       object-fit: contain; /* Resmi kartın içine sığdır */
+       object-fit: contain;
+    /* Resmi kartın içine sığdır */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }

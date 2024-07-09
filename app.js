@@ -14,10 +14,10 @@ function startClearingStories() {
     intervalId = setInterval(async () => {
         try {
             await Story.deleteMany({});
-            console.log('Tüm hikayeler silindi.');
-            clearInterval(intervalId); // Hikayeler silindikten sonra setInterval'ı durdur
+            console.log('Story silindi.');
+            clearInterval(intervalId); 
         } catch (error) {
-            console.error('Hikayeleri silerken hata oluştu:', error);
+            console.error('Silme:', error);
         }
     }, 86400);
 }
