@@ -9,7 +9,60 @@
     <link rel="icon" type="image/x-icon" href="/img/romanoBrand.png">
     <title>Romano Brand</title>
 </head>
+<style>
 
+.story_section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.story_product {
+    display: flex; /* Flexbox düzeni */
+    justify-content: center; /* İçeriği yatayda ortala */
+    align-items: flex-start; /* İçeriği üstten hizala */
+    width: 100%;
+    height: 80%;
+    max-width: 1200px;
+    position: relative;
+    overflow-y: auto; /* Dikey kaydırma */
+    flex-wrap: wrap; /* İçerik sarma */
+}
+
+.close_story {
+    position: fixed; /* Sabit konum */
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: white; /* Beyaz renk */
+}
+
+.story_card {
+    display: inline-block;
+    background: none;
+    border: none;
+    text-align: center;
+    width: 300px; /* Kart genişliği */
+    margin: 0 10px 10px 0; /* Kartlar arası boşluk */
+    vertical-align: top; /* Kartların üstten hizalanması */
+}
+
+.story_img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+</style>
 <body>
     <div class="container">
 
@@ -134,14 +187,11 @@
             <section class="story_section">
                 <div class="story_product">
                     <i class="fa-solid fa-xmark close_story" style="color: white;"></i>
-                    <div class="row">
+                    <div class="row justify-content-center story_child"> <!-- Ortalamak için justify-content-center eklendi -->
                         <% stories.forEach(story => { %>
                             <div class="col-md-4 mb-4">
-                                <div class="card">
-                                    <img src="<%= story.img %>" class="card-img-top" alt="">
-                                    <div class="card-body">
-                                        <!-- İsteğe bağlı başlık veya metin eklenebilir -->
-                                    </div>
+                                <div class="story_card">
+                                    <img src="<%= story.img %>" class="card-img-top story_img" alt="">
                                 </div>
                             </div>
                         <% }); %>
@@ -149,15 +199,20 @@
                 </div>
             </section>
         <% } else { %>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <p class="text-center">Henüz hikaye bulunamadı.</p>
+            <section class="story_section">
+                <div class="story_product">
+                    <i class="fa-solid fa-xmark close_story" style="color: white;"></i>
+                    <div class="story_card">
+                        <div class="card-body">
+                            <p class="text-center textstyle">Yeni story soxdur.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         <% } %>
-git         
+        
+        
+        
         
         
 
@@ -169,6 +224,10 @@ git
             </div>
         </section>
     </section>
+
+    <div>
+        <span></span>
+    </div>
 
     </div>
     <script src="/js/home.js"></script>

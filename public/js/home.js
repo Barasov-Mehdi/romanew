@@ -182,6 +182,8 @@ var story_btn = document.querySelectorAll('.story_btn');
 var story_section = document.querySelector('.story_section');
 var fa_xmark = document.querySelector('.close_stoyr');
 var container = document.querySelector('.container');
+var close_story = document.querySelector('.close_story');
+
 //*Story Side
 story_btn.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -190,7 +192,10 @@ story_btn.forEach(btn => {
 
     });
 });
-fa_xmark.addEventListener('click', () => {
+close_story.addEventListener('click', () => {
     story_section.style.display = 'none';
     story_section.style.position = 'static';
 });
+
+var textstyle = document.querySelector('.textstyle').style.color='white';
+var textstyle = document.querySelector('.textstyle').style.fontSize='20px';

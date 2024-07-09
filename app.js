@@ -8,14 +8,27 @@ const Product = require('./models/db');
 const Story = require('./models/story'); // Use 'Story' instead of 'stories' here for clarity
 const app = express();
 
+let intervalId; // setInterval fonksiyonunun dönüş değerini saklamak için bir değişken
 
+function startClearingStories() {
+    intervalId = setInterval(async () => {
+        try {
+            await Story.deleteMany({});
+            console.log('Tüm hikayeler silindi.');
+            clearInterval(intervalId); // Hikayeler silindikten sonra setInterval'ı durdur
+        } catch (error) {
+            console.error('Hikayeleri silerken hata oluştu:', error);
+        }
+    }, 86400);
+}
+startClearingStories();
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
     api_key: process.env.CLOUDINARY_API_KEY,
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
-
-const PORT = process.env.PORT || 3000;
+ 
+const PORT = process.env.PORT || 5000;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static('public'));

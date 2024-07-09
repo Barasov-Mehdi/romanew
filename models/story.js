@@ -9,3 +9,4 @@ const storySchema = new mongoose.Schema({
 
 const stories = mongoose.model('story', storySchema);
 module.exports = stories;
+
