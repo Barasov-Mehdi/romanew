@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/romanoBrand.png">
+    <title>Romano Brand</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+
+            <div class="head">
+                <!-- logo_img -->
+                <div class="logo_img">
+                    <a href="/"><img src="/imgs/romanoBrand.png" alt="ROMANO BRAND"></a>
+                    <!-- <a href="index.html"><img src="./imgs/romanoNew.png" alt="ROMANO BRAND"></a> -->
+                </div>
+                <!-- search_box -->
+                <div class="search_box">
+                    <input class="search_inp" type="text" placeholder="Hər Növ Geyim Mövcuddur...">
+                    <button class="search_btn"><i class="fa-solid fa-magnifying-glass"
+                            style="color: white;"></i></button>
+                </div>
+                <!-- story box -->
+                <div class="story_box">
+                    <div class="story_btn"><span>Story</span></div>
+                </div>
+
+                <!-- some_icons -->
+            </div>
+            <div class="helpBoxOne">
+
+            </div>
+            <!-- mb header -->
+            <div class="mb_header_box">
+                <div class="mb_header">
+                    <div class="logo_img">
+                        <a href="index.html"><img src="/imgs/romanoBrand2.png" alt="ROMANO BRAND"></a>
+                        <!-- <a href="index.html"><img src="./imgs/romanoNew2.png" alt="ROMANO BRAND"></a> -->
+                    </div>
+                    <div class="search_and_btn">
+                        <input class="search_inp" type="text" placeholder="Hər Növ Geyim Mövcuddur...">
+                        <button class="search_btn"><i class="fa-solid fa-magnifying-glass" style="color: white;"></i>
+                        </button>
+                    </div>
+                    <div class="menu_box">
+                        <i class="fa-solid fa-bars open_bars" style="color: white;"></i>
+                    </div>
+                </div>
+                <div class="story_box">
+                    <div class="story_about_time">
+                        <div>
+                            <span class="mainText">Ölkə Daxili Çatdırılma</span>
+                            <!-- Poçtla -->
+                        </div>
+
+                        <div class="story_btn"><span>Story</span></div>
+
+                        <div>
+                            <span class="mainText">İş Saatı <span>09:00 | 17:00</span></span>
+                        </div>
+
+                    </div>
+                    <div class="mb_some_icons">
+                        <div>
+                            <a href="https://www.instagram.com/romano_kisi_geyimleri/?igsh=MXI5Ymd1aWJpczBlMQ%3D%3D"><i
+                                    class="fa-brands fa-instagram" style="color:white;"></i></a>
+                            <a href="https://wa.me/+994516563276?text=Salam."><i class="fa-brands fa-whatsapp"
+                                    style="color: white;"></i></a>
+                            <a
+                                href="https://www.google.com/maps/place/41%C2%B037'28.7%22N+46%C2%B038'26.2%22E/@41.6246389,46.6380362,17z/data=!3m1!4b1!4m4!3m3!8m2!3d41.6246389!4d46.6406111?entry=ttu"><i
+                                    class="fa-solid fa-location-dot" style="color: white;"></i></a>
+                            <a href="tel:+994516563276"><i class="fa-solid fa-phone" style="color: white;"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="nav">
+            <a href="/">Home</a>
+            <a class="product_link l1" href="#" data-category="Şalvar">Şalvar</a>
+            <a class="product_link l2" href="#" data-category="Köynək">Köynək</a>
+            <a class="product_link l3" href="#" data-category="Sport Dəst">Sport Dəst</a>
+            <a class="product_link l4" href="#" data-category="T-Shirt">T-Shirt</a>
+            <a class="product_link l8" href="#" data-category="Yağmurluk">Yağmurluk</a>
+            <a class="product_link l5" href="#" data-category="OverSize Combine">OverSize Combine</a>
+            <a class="product_link l6" href="#" data-category="Kapşon">Kapşon</a>
+            <a class="product_link l7" href="#" data-category="Jaket">Jaket</a>
+        </nav>
+
+        <div class="headerText">
+            <span class="mainText">Ölkə Daxili Poçtla Çatdırılma</span>
+            <div class="some_icons">
+                <a href="https://www.instagram.com/romano_kisi_geyimleri/?igsh=MXI5Ymd1aWJpczBlMQ%3D%3D"><i
+                        class="fa-brands fa-instagram" style="color:white;"></i></a>
+                <a href="https://wa.me/+994516563276?text=Salam."><i class="fa-brands fa-whatsapp"></i></a>
+                <a
+                    href="https://www.google.com/maps/place/41%C2%B037'28.7%22N+46%C2%B038'26.2%22E/@41.6246389,46.6380362,17z/data=!3m1!4b1!4m4!3m3!8m2!3d41.6246389!4d46.6406111?entry=ttu"><i
+                        class="fa-solid fa-location-dot" style="color: white;"></i></a>
+                <a href="tel:+994516563276"><i class="fa-solid fa-phone" style="color: white;"></i></a>
+            </div>
+            <span class="mainText">İş Saatı <span>09:00 | 17:00</span></span>
+        </div>
+
+        <div class="brand_name">
+            <h1>Romano Brand</h1>
+        </div>
+
+        <main class="product_box">
+            <% products.forEach(product=> { %>
+                <div class="product_card" data-id="<%=product._id%>">
+                    <img src="<%= product.img %>" class="product_img" alt="<%= product.productName %>">
+                    <div class="product_details">
+                        <h5 class="product_name">
+                            <%= product.productName %>
+                        </h5>
+                        <p class="product_size">Size: <%= product.size %>
+                        </p>
+                        <div class="pro_contact"><button class="whatsappButton">Məlumat Üçün</button></div>
+                    </div>
+                </div>
+                <% }); %>
+        </main>
+
+        <% if (stories && stories.length > 0) { %>
+            <section class="story_section">
+                <div class="story_product">
+                    <i class="fa-solid fa-xmark close_story" style="color: white;"></i>
+                    <div class="row">
+                        <% stories.forEach(story => { %>
+                            <div class="col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="<%= story.img %>" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <!-- İsteğe bağlı başlık veya metin eklenebilir -->
+                                    </div>
+                                </div>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+            </section>
+        <% } else { %>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p class="text-center">Henüz hikaye bulunamadı.</p>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+git         
+        
+        
+
+    <section class="bars_box">
+        <i class="fa-solid fa-xmark close_bars" style="color: white;"></i>
+        <section class="bars_content">
+            <div class="brand_name">
+                <h1>Romano Brand</h1>
+            </div>
+        </section>
+    </section>
+
+    </div>
+    <script src="/js/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <title>Story</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control-file {
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            width: 100%;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="form-title">Story Yüklə</h1>
+            <form action="/story" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="imgs">Story Şəkili Seçin:</label>
+                    <input type="file" class="form-control-file" id="storyImage" name="imgs" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">Yüklə</button>
+            </form>
+        </div>
+    </div>
+    <script src="/js/home.js"></script>
+</body>
+</html>

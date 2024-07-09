@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <title>Sil</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Məhsul Sil</h1>
+        <form action="/remove" method="POST">
+            <% products.forEach(function(product) { %>
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="<%= product.img %>" class="card-img" alt="<%= product.productName %>">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= product.productName %></h5>
+                                <p class="card-text">Size: <%= product.size %></p>
+                                <p class="card-text">Kategoriya: <%= product.category %></p>
+                                <button type="submit" name="productId" value="<%= product._id %>" class="btn btn-danger">Sil</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </form>
+    </div>
+</body>
+</html>

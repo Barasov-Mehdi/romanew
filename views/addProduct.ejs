@@ -1,0 +1,50 @@
+<!-- views/addProduct.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Məhsul və Hikaye Əlavə Et</title>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        /* Özel CSS kuralları buraya */
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="text-center mb-4">Məhsul Əlavə Et</h1>
+                <form action="/addProduct" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="productName">Məhsul Adı:</label>
+                        <input type="text" class="form-control" id="productName" name="productName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="img">Şəkil:</label>
+                        <input type="file" class="form-control-file" id="img" name="img" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="size">Size:</label>
+                        <input type="text" class="form-control" id="size" name="size" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Kategori:</label>
+                        <select class="form-control" id="category" name="category" required>
+                            <option value="Şalvar">Şalvar</option>
+                            <option value="Köynək">Köynək</option>
+                            <option value="Sport Dəst">Sport Dəst</option>
+                            <option value="T-Shirt">T-Shirt</option>
+                            <option value="Yağmurluk">Yağmurluk</option>
+                            <option value="OverSize Combine">OverSize Combine</option>
+                            <option value="Kapşon">Kapşon</option>
+                            <option value="Jaket">Jaket</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mt-4">Məhsul Əlavə Et</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

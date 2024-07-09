@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <title>Məhsul Haqqında</title>
+</head>
+<style>
+    .product_box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 2rem;
+
+        .product_card {
+            width: calc(30% - 20px);
+            /* Kartların genişliği ve aralarındaki boşluk */
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Hafif bir gölge efekti */
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                /* Hover'da gölge efekti */
+            }
+
+            .product_img {
+                width: 100%;
+                height: auto;
+                /* Otomatik yükseklik */
+                object-fit: contain;
+                /* Resmi kartın içine sığdır */
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            .product_details {
+                padding: 1rem;
+                text-align: center;
+                /* Ortaya hizalama */
+
+                .product_name {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin-bottom: 0.5rem;
+                    color: #333;
+                    /* Yazı rengini biraz koyulaştıralım */
+                }
+
+                .product_size {
+                    font-size: 1rem;
+                    color: #666;
+                    /* Yazı rengini biraz açalım */
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            .pro_contact {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem;
+
+                .whatsappButton {
+                    width: 90%;
+                    background-color: rgb(47, 158, 47);
+                    color: white;
+                    border: none;
+                    outline: none;
+                    height: 35px;
+                    margin: 5px 0;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: rgb(39, 132, 39);
+                        /* Hover'da renk değişimi */
+                    }
+                }
+            }
+        }
+    }
+</style>
+
+<body>
+    <header class="bg-dark py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <a href="/" class="text-white text-decoration-none">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                </div>
+                <div class="col">
+                    <h1 class="text-white fw-bold">Romano Brand</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="<%= product.img %>" class="img-fluid rounded" alt="<%= product.productName %>">
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 border bg-white shadow-sm rounded">
+                        <h1 class="mb-4">
+                            <%= product.productName %>
+                        </h1>
+                        <p class="fs-5">Size: <%= product.size %>
+                        </p>
+                        <p class="fs-5">Category: <%= product.category %>
+                        </p>
+                        <button class="btn btn-primary whatsappButton">Məlumat Üçün</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <article class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="fs-5 text-center">
+                        RomanoBrend Geyim dükanı, Zaqatala'da Səmimi əməkdaşlıqla ictimaiyə təqdim edir. Ən yeni
+                        modellər və dizaynlar, ən yüksək keyfiyyətli materiallar istifadə olunur. Dükana gələcək
+                        sivilizasiyaya aid olan, Ən populyar modellər mövcuddur.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <main class="container">
+        <div class="row">
+            <% products.forEach(product=> { %>
+                <div class="col-md-4 mb-4">
+                    <div class="card product_card" data-id="<%=product._id%>">
+                        <img src="<%= product.img %>" class="card-img-top product_img" alt="<%= product.productName %>">
+                        <div class="card-body text-center">
+                            <h5 class="card-title product_name">
+                                <%= product.productName %>
+                            </h5>
+                            <p class="card-text product_size">Size: <%= product.size %>
+                            </p>
+                            <button class="btn btn-success whatsappButton">Məlumat Üçün</button>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector(".whatsappButton").addEventListener("click", function () {
+                var currentUrl = encodeURIComponent(window.location.href);
+                var whatsappNumber = "+994516563276";
+                var whatsappLink = `https://wa.me/${whatsappNumber}?text=${currentUrl}`;
+                window.open(whatsappLink, "_blank");
+            });
+        });
+
+        document.querySelectorAll('.product_card').forEach(card => {
+            card.addEventListener('click', () => {
+                const productId = card.getAttribute('data-id');
+                window.location.href = `/productDetails/${productId}`; // Detay sayfasına yönlendirme
+            });
+        });
+    </script>
+</body>
+
+</html>
